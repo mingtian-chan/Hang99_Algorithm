@@ -1,0 +1,9 @@
+/.autocp
+/.idea/.gitignore
+
+/.idea/*.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/inspectionProfiles/profiles_settings.xml
