@@ -6,20 +6,16 @@ import sys
 T = int(sys.stdin.readline().rstrip())
 
 for _ in range(T):
-    flag = 0
     n = int(sys.stdin.readline().rstrip())
-    lst = []
-    for i in range(n):
-        lst.append(sys.stdin.readline().rstrip())
+    lst = [sys.stdin.readline().rstrip() for _ in range(n)]
 
     lst.sort() # 퀵소트 함 ( nlogn )
-    for idx in range(len(lst)-1):
-        if lst[idx] in lst[idx + 1]:
-            flag = 1
-            break
 
-    if flag == 1:
-        print("NO")
+    for idx in range(len(lst)-1):
+        # 앞부분만 서로 비교함 ( prefix )
+        if lst[idx] == lst[idx + 1][:len(lst[idx])]:
+            print("NO")
+            break
     else:
         print("YES")
 
